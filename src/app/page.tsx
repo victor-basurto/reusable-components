@@ -1,3 +1,4 @@
+import ToggleTheme from "@/components/ToggleTheme";
 import Image from "next/image";
 
 export default function Home() {
@@ -60,6 +61,8 @@ export default function Home() {
           </a>
         </div>
       </main>
+      {/* TODO: move `<ToggleTheme>` to header component when ready */}
+      <ToggleTheme />
     </div>
   );
 }
