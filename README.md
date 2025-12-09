@@ -20,17 +20,58 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Goal 🚀
 
-To learn more about Next.js, take a look at the following resources:
+### NextJS Reusable Components Library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is a collection of reusable UI components built with Next.js (App Router), TypeScript, Tailwind CSS, and Radix UI primitives (where needed).
+Feel free to copy any component into your own project, extend it, or contribute new ones!
+Component Checklist
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
+- [ ] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
+- [ ] `<Textarea>` – Multiline text input with auto-resize option
+- [ ] `<Label>` – Accessible form label
+- [ ] `<Checkbox>` – Single checkbox with indeterminate state
+- [ ] `<RadioGroup>` – Radio button group
+- [ ] `<Switch>` – Toggle switch
+- [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
+- [ ] `<Combobox>` – Autocomplete / searchable dropdown
+- [ ] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
+- [ ] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
+- [ ] `<Popover>` – Small overlay triggered by hover/click
+- [ ] `<Tooltip>` – Simple text tooltip
+- [ ] `<Toast>` / `<Toaster>` – Notification system
+- [ ] `<Alert>` – Info, success, warning, and error alerts
+- [ ] `<AlertDialog>` – Destructive/confirm action modal
+- [ ] `<Card>` – Flexible card container with header, footer, and content slots
+- [ ] `<Avatar>` – Image or fallback avatar with status indicator
+- [ ] `<Badge>` – Small status/label badge with multiple variants
+- [ ] `<Skeleton>` – Loading placeholder component
+- [ ] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
+- [ ] `<Separator>` – Horizontal or vertical divider
+- [ ] `<Accordion>` – Collapsible content sections
+- [ ] `<Tabs>` – Tabbed interface
+- [ ] `<DropdownMenu>` – Right-click or button-triggered menu
+- [ ] `<NavigationMenu>` – Horizontal navigation with dropdowns (desktop-friendly)
+- [ ] `<Breadcrumbs>` – Navigation breadcrumb trail
+- [ ] `<Pagination>` – Page navigation with previous/next and page numbers
+- [ ] `<Table>` – Responsive data table with sorting, selection, etc.
+- [ ] `<DataTable>` – Advanced table with filtering, sorting, pagination (built on TanStack Table)
+- [ ] `<Progress>` – Progress bar (determinate & indeterminate)
+- [ ] `<Slider>` – Range slider input
+- [ ] `<Toggle>` – Single toggle button (like bold/italic in editors)
+- [ ] `<ToggleGroup>` – Group of toggle buttons (exclusive or multiple)
+- [ ] `<AspectRatio>` – Maintain aspect ratio for images/videos
+- [ ] `<Carousel>` – Image/content carousel with swipe support
+- [ ] `<Command>` – Fast command palette (like Cmd+K menus)
+- [ ] `<Kbd>` – Keyboard key styling component
+- [ ] `<CopyButton>` – Button that copies text to clipboard
+- [ ] `<HoverCard>` – Card that appears on hover
+- [ ] `<ScrollArea>` – Custom scrollbar area for long content
+- [ ] `<Sheet>` – Side sheet (alternative drawer implementation)
+- [ ] `<Sonner>` integration – Optional beautiful toast alternative
+- [ ] `<Form>` + zod integration – Reusable form wrapper with validation
+- [x] `<ThemeProvider>` & `<ThemeToggle>` – Dark/light mode switcher
+- [ ] `<ErrorBoundary>` – Component-level error boundary with fallback UI
+- [ ] `<SuspenseFallback>` – Standardized loading fallback for React Suspense
