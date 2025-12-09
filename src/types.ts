@@ -10,3 +10,4 @@ export type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
+export const DEFAULT_THEME: Theme = "light";

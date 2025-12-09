@@ -4,6 +4,6 @@ import type { ThemeContextType, Theme } from "@/types";
 
 // create the default context
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: "dark" as Theme,
+  theme: "light" as Theme,
   toggleTheme: () => {},
 });
