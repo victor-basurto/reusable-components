@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useEffect, useState, useContext } from "react";
-import { DEFAULT_THEME, Theme, ThemeContextType } from "@/types";
+import { DEFAULT_THEME, Theme, ThemeContextType } from "@/types/provider";
 import { ThemeContext } from "./theme-context";
 
 // use the theme context
