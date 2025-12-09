@@ -1,7 +1,20 @@
+"use client";
 import ToggleTheme from "@/components/ToggleTheme";
+import Dialog from "@/components/ui/Dialog";
+import { DialogHandle } from "@/types/ui";
 import Image from "next/image";
-
+import { useRef } from "react";
 export default function Home() {
+  const dialog = useRef<DialogHandle>(null);
+  // TODO: use the proper `button` component
+  const dialogActions = <button>close</button>;
+  // TODO: use the proper `template` for description
+  const dialogDescription = (
+    <p>This is the content of the dialog. Click `close` to exit</p>
+  );
+  const handleDialogOpen = () => {
+    dialog.current?.open();
+  };
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -63,6 +76,17 @@ export default function Home() {
       </main>
       {/* TODO: move `<ToggleTheme>` to header component when ready */}
       <ToggleTheme />
+
+      {/* TODO: move `<Dialog>` to desire page when page is ready */}
+      <Dialog
+        ref={dialog}
+        title="Dialog Title"
+        description={dialogDescription}
+        modalActions={dialogActions}
+      />
+      <button className="primary-btn" onClick={handleDialogOpen}>
+        open dialog
+      </button>
     </div>
   );
 }
