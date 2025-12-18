@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "@/store/theme-context-provider";
 import { useState, useEffect } from "react";
+import { Icon } from "./abstract/Icon";
 
 export default function ToggleTheme() {
   const { theme, toggleTheme } = useTheme();
@@ -24,8 +25,17 @@ export default function ToggleTheme() {
 
   // after hydration, show the actual theme-dependent content
   return (
+    // TODO: replace with button component to proper styling
     <button className="theme-btn" onClick={toggleTheme}>
-      {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+      {theme === "light" ? (
+        <>
+          <Icon name="moon" className="inline w-4 h-4 mr-1" /> Dark
+        </>
+      ) : (
+        <>
+          <Icon name="sun" className="inline w-4 h-4 mr-1" /> Light
+        </>
+      )}
     </button>
   );
 }

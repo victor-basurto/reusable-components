@@ -13,3 +13,11 @@ export interface DialogProps {
 export interface DialogHandle {
   open: () => void;
 }
+/**
+ * Icon Types
+ * */
+export type IconName = "sun" | "moon" | "search" | "user" | "settings" | "home";
+export interface IconSelectorProps {
+  name: IconName;
+  className?: string;
+}

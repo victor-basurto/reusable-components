@@ -1,41 +1,49 @@
+"use client";
 import type { DialogHandle, DialogProps } from "@/types/ui";
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import {
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+  useState,
+  useEffect,
+} from "react";
 import { createPortal } from "react-dom";
 
 const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   { title, description, modalActions },
   ref,
 ) {
-  // dialog placeholder for dialog properties
   const dialog = useRef<HTMLDialogElement>(null);
-  // dialog `html` markup
+  // create a state to store the portal target
+  const [mounted, setMounted] = useState(false);
+  // set mounted to true once the component is in the browser
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  useImperativeHandle(ref, () => ({
+    open: () => {
+      dialog.current?.showModal();
+    },
+  }));
+
+  if (!mounted) return null;
   const dialogRoot = document.getElementById("dialog");
-  // add custom/private method
-  useImperativeHandle(ref, () => {
-    return {
-      open: () => {
-        dialog.current?.showModal();
-      },
-    };
-  });
-  // throw error if there is no dialog present
+
   if (!dialogRoot) {
-    console.error(
-      "The portal root element with id `Dialog` was not found in the DOM",
-    );
+    console.error("The portal root element with id `dialog` was not found");
     return null;
   }
-  // teletransport the dialog into the root markup
+
   return createPortal(
-    <dialog id="dialog" ref={dialog}>
+    <dialog id="dialog-element" ref={dialog} className="your-css-class">
       <h2>{title}</h2>
       {description}
       <form method="dialog" id="dialog-actions">
-        {/* `modalActions` are buttons, we still need to add content here to load form fields */}
         {modalActions}
       </form>
     </dialog>,
     dialogRoot,
   );
 });
+
 export default Dialog;

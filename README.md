@@ -37,10 +37,11 @@ Component Checklist
 - [ ] `<Switch>` – Toggle switch
 - [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
 - [ ] `<Combobox>` – Autocomplete / searchable dropdown
-- [ ] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
+- [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
 - [ ] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
 - [ ] `<Popover>` – Small overlay triggered by hover/click
 - [ ] `<Tooltip>` – Simple text tooltip
+- [x] `<Icon>` – Simple Icon selector using Lucide Icons
 - [ ] `<Toast>` / `<Toaster>` – Notification system
 - [ ] `<Alert>` – Info, success, warning, and error alerts
 - [ ] `<AlertDialog>` – Destructive/confirm action modal
