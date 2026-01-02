@@ -21,3 +21,7 @@ export interface IconSelectorProps {
   name: IconName;
   className?: string;
 }
+
+/**
+ * Button Types
+ * */
