@@ -28,7 +28,7 @@ This project is a collection of reusable UI components built with Next.js (App R
 Feel free to copy any component into your own project, extend it, or contribute new ones!
 Component Checklist
 
-- [ ] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
+- [x] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
 - [ ] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
 - [ ] `<Textarea>` – Multiline text input with auto-resize option
 - [ ] `<Label>` – Accessible form label
