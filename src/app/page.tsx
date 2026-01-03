@@ -35,8 +35,8 @@ export default function Home() {
           height={20}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left dark:bg-zinc-50 white">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left white">
+          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-primary">
             To get started, edit the page.tsx file.
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
