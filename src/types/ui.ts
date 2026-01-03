@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 // ================================================
 // UI Types
 // ================================================
@@ -16,7 +16,14 @@ export interface DialogHandle {
 /**
  * Icon Types
  * */
-export type IconName = "sun" | "moon" | "search" | "user" | "settings" | "home";
+export type IconName =
+  | "sun"
+  | "moon"
+  | "search"
+  | "user"
+  | "settings"
+  | "home"
+  | "loader";
 export interface IconSelectorProps {
   name: IconName;
   className?: string;
@@ -25,3 +32,17 @@ export interface IconSelectorProps {
 /**
  * Button Types
  * */
+// button variants
+export type ButtonSize = "sm" | "md" | "lg";
+export type ButtonVariant = "primary" | "ghost" | "outline" | "danger";
+export type ButtonVariantStyles = Record<ButtonVariant, string>;
+export type ButtonSizeStyles = Record<ButtonSize, string>;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  isLoading?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+  prefetch?: boolean;
+}

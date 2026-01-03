@@ -1,4 +1,10 @@
-.dark-theme {
+.dark {
   --body-bg: #333;
   --body-color: #fff;
+  --primary: #7986cb; /* Lighter indigo for better readability on dark */
+  --primary-foreground: #000000;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --text-foreground: #fff;
 }

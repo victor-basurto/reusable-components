@@ -1,5 +1,6 @@
 "use client";
 import ToggleTheme from "@/components/ToggleTheme";
+import { Button } from "@/components/ui/Button";
 import Dialog from "@/components/ui/Dialog";
 import { DialogHandle } from "@/types/ui";
 import Image from "next/image";
@@ -7,7 +8,15 @@ import { useRef } from "react";
 export default function Home() {
   const dialog = useRef<DialogHandle>(null);
   // TODO: use the proper `button` component
-  const dialogActions = <button>close</button>;
+  const dialogActions = (
+    <Button
+      variant="danger"
+      className="flex items-center gap-2 transition-all duration-300"
+      size="md"
+    >
+      close
+    </Button>
+  );
   // TODO: use the proper `template` for description
   const dialogDescription = (
     <p>This is the content of the dialog. Click `close` to exit</p>
@@ -49,44 +58,49 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+          <Button
+            variant="ghost"
+            className="flex items-center gap-2 transition-all duration-300"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <Image
-              className="dark:invert"
+              className=""
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
               height={16}
             />
             Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+          </Button>
+          <Button
+            variant="outline"
+            className="flex items-center gap-2 transition-all duration-300"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Documentation
-          </a>
+          </Button>
         </div>
       </main>
-      {/* TODO: move `<ToggleTheme>` to header component when ready */}
-      <ToggleTheme />
+      <div className="grid gap-4">
+        {/* TODO: move `<ToggleTheme>` to header component when ready */}
+        <ToggleTheme />
 
-      {/* TODO: move `<Dialog>` to desire page when page is ready */}
-      <Dialog
-        ref={dialog}
-        title="Dialog Title"
-        description={dialogDescription}
-        modalActions={dialogActions}
-      />
-      <button className="primary-btn" onClick={handleDialogOpen}>
-        open dialog
-      </button>
+        {/* TODO: move `<Dialog>` to desire page when page is ready */}
+        <Dialog
+          ref={dialog}
+          title="Dialog Title"
+          description={dialogDescription}
+          modalActions={dialogActions}
+        />
+        <Button
+          variant="primary"
+          size="md"
+          onClick={handleDialogOpen}
+          className="flex items-center gap-2 transition-all duration-300"
+        >
+          open dialog
+        </Button>
+      </div>
     </div>
   );
 }

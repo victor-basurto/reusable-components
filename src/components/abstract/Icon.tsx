@@ -1,6 +1,14 @@
 import { FC, JSX } from "react";
 import { IconName, IconSelectorProps } from "@/types/ui";
-import { Sun, Moon, Search, User, Settings, Home } from "lucide-react";
+import {
+  Sun,
+  Moon,
+  Search,
+  User,
+  Settings,
+  Home,
+  LoaderCircle,
+} from "lucide-react";
 
 const icons: Record<IconName, FC<{ className?: string }>> = {
   sun: Sun,
@@ -9,6 +17,7 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   user: User,
   settings: Settings,
   home: Home,
+  loader: LoaderCircle,
 };
 /**
  * @name Icon

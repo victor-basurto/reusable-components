@@ -1,4 +1,13 @@
 @import "./theme/root";
 
+.bg-primary {
+  background-color: var(--primary);
+}
+.text-primary-fg {
+  color: var(--primary-foreground);
+}
+.text-forground {
+  color: var(--primary-foreground);
+}
 $body-color: var(--body-color);
 $body-bg: var(--body-bg);
