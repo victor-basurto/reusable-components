@@ -30,7 +30,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
         >
           {children}
-          <div id="dialog"></div>
+          <div id="modal"></div>
         </body>
       </html>
     </ThemeContextProvider>

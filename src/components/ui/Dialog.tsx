@@ -27,7 +27,7 @@ const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   }));
 
   if (!mounted) return null;
-  const dialogRoot = document.getElementById("dialog");
+  const dialogRoot = document.getElementById("modal");
 
   if (!dialogRoot) {
     console.error("The portal root element with id `dialog` was not found");
@@ -35,7 +35,7 @@ const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   }
 
   return createPortal(
-    <dialog id="dialog-element" ref={dialog} className="your-css-class">
+    <dialog id="modal" ref={dialog} className="">
       <h2>{title}</h2>
       {description}
       <form method="dialog" id="dialog-actions">
