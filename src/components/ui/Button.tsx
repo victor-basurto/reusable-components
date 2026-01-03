@@ -1,3 +1,4 @@
+"use client";
 import { ButtonProps, ButtonVariantStyles, ButtonSizeStyles } from "@/types/ui";
 import Link from "next/link";
 import React, { forwardRef } from "react";

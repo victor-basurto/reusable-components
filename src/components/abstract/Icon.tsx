@@ -1,3 +1,4 @@
+"use client";
 import { FC, JSX } from "react";
 import { IconName, IconSelectorProps } from "@/types/ui";
 import {
