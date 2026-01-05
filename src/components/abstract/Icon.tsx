@@ -8,6 +8,9 @@ import {
   User,
   Settings,
   Home,
+  X,
+  CircleX,
+  Minus,
   LoaderCircle,
 } from "lucide-react";
 
@@ -18,6 +21,9 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   user: User,
   settings: Settings,
   home: Home,
+  minus: Minus,
+  close: X,
+  "circle-close": CircleX,
   loader: LoaderCircle,
 };
 /**

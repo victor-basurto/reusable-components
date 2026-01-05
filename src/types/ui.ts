@@ -23,6 +23,9 @@ export type IconName =
   | "user"
   | "settings"
   | "home"
+  | "close"
+  | "minus"
+  | "circle-close"
   | "loader";
 export interface IconSelectorProps {
   name: IconName;
