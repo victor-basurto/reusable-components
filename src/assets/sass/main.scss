@@ -1,5 +1,5 @@
 // @import "base";
-@import "components/index";
+@use "components/index";
 // @import "variants";
-@import "global.scss";
-@import "app";
+@use "global.scss";
+@use "app";

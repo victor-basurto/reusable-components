@@ -1,3 +1,5 @@
+@use "./dark";
+@use "./light";
 :root {
   --body-bg: #fff;
   --body-color: #333;
@@ -8,6 +10,3 @@
   --text-foreground: #1a1a1a;
   --border-color: #e0e0e0;
 }
-
-@import "./dark";
-@import "./light";

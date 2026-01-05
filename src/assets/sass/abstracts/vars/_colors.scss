@@ -1,4 +1,4 @@
-@import "./theme/root";
+@forward "./theme/root";
 
 .bg-primary {
   background-color: var(--primary);

@@ -1,6 +1,6 @@
-@import "./abstracts/vars";
+@use "./abstracts/vars" as vars;
 p {
-  color: $body-color;
+  color: vars.$body-color;
   margin-top: 0;
   margin-bottom: 1rem;
 }

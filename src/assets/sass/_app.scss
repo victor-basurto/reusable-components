@@ -1,4 +1,4 @@
-@import "./abstracts/vars";
+@use "./abstracts/vars";
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,10 +9,10 @@ body {
   position: relative;
   overflow: auto;
   overflow-x: hidden;
-  color: $body-color;
+  color: vars.$body-color;
   font-size: inherit;
   line-height: 1.5;
-  background: $body-bg;
+  background: vars.$body-bg;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   height: auto !important;
 }

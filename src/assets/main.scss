@@ -1,10 +1,9 @@
+@forward "tailwindcss";
+// custom css
+@use "sass/main";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "tailwindcss";
 
 // enable `dark` mode manually
 @custom-variant dark (&:where(.dark, .dark *));
-
-// custom css
-@import "sass/main";
