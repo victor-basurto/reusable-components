@@ -1,5 +1,5 @@
 "use client";
-import { Icon } from "@/components/abstract/Icon";
+import UserSettings from "@/components/test-components/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/Button";
 import Dialog from "@/components/ui/Dialog";
@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-primary">
             To get started, edit the page.tsx file.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <div className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more
             {/* TODO: tooltip should be dark mode enabled */}
             <Tooltip content="instruction details, Nextjs Docs" position="top">
@@ -62,7 +62,7 @@ export default function Home() {
               Learning
             </a>{" "}
             center.
-          </p>
+          </div>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Button
@@ -107,6 +107,7 @@ export default function Home() {
         >
           open dialog
         </Button>
+        <UserSettings />
       </div>
     </div>
   );

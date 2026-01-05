@@ -39,7 +39,7 @@ Component Checklist
 - [ ] `<Combobox>` – Autocomplete / searchable dropdown
 - [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
 - [ ] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
-- [ ] `<Popover>` – Small overlay triggered by hover/click
+- [x] `<Popover>` – Small overlay triggered by hover/click
 - [x] `<Tooltip>` – Simple text tooltip
 - [x] `<Icon>` – Simple Icon selector using Lucide Icons
 - [ ] `<Toast>` / `<Toaster>` – Notification system

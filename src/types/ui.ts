@@ -57,3 +57,11 @@ export interface TooltipProps {
   children: React.ReactNode;
   delay?: number;
 }
+/**
+ * Popover Types
+ * */
+export interface PopoverProps {
+  trigger: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+}
