@@ -42,7 +42,7 @@ Component Checklist
 - [x] `<Popover>` – Small overlay triggered by hover/click
 - [x] `<Tooltip>` – Simple text tooltip
 - [x] `<Icon>` – Simple Icon selector using Lucide Icons
-- [ ] `<Toast>` / `<Toaster>` – Notification system
+- [x] `<Toast>` / `<Toaster>` – Notification system
 - [ ] `<Alert>` – Info, success, warning, and error alerts
 - [ ] `<AlertDialog>` – Destructive/confirm action modal
 - [ ] `<Card>` – Flexible card container with header, footer, and content slots

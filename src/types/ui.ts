@@ -25,7 +25,10 @@ export type IconName =
   | "home"
   | "close"
   | "minus"
-  | "circle-close"
+  | "circleclose"
+  | "circlecheck"
+  | "trianglealert"
+  | "info"
   | "loader";
 export interface IconSelectorProps {
   name: IconName;
@@ -67,4 +70,17 @@ export interface PopoverProps {
   trigger: React.ReactNode;
   children: React.ReactNode;
   className?: string;
+}
+/**
+ * Toast Types
+ * */
+export type ToastType = "success" | "error" | "info" | "warning";
+export interface Toast {
+  id: string;
+  message: string;
+  type?: ToastType;
+}
+export interface ToastContextType {
+  addToast: (message: string, type?: ToastType) => void;
+  removeToast: (id: string) => void;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../assets/main.scss";
 import ThemeContextProvider from "@/store/theme-context-provider";
+import ToastContextProvider from "@/store/toast-context-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,14 +26,16 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeContextProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-        >
-          {children}
-          <div id="modal"></div>
-        </body>
-      </html>
+      <ToastContextProvider>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+          >
+            {children}
+            <div id="modal"></div>
+          </body>
+        </html>
+      </ToastContextProvider>
     </ThemeContextProvider>
   );
 }

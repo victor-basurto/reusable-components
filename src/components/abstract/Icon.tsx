@@ -12,6 +12,9 @@ import {
   CircleX,
   Minus,
   LoaderCircle,
+  Info,
+  CircleCheck,
+  TriangleAlert,
 } from "lucide-react";
 
 const icons: Record<IconName, FC<{ className?: string }>> = {
@@ -23,7 +26,10 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   home: Home,
   minus: Minus,
   close: X,
-  "circle-close": CircleX,
+  circleclose: CircleX,
+  circlecheck: CircleCheck,
+  info: Info,
+  trianglealert: TriangleAlert,
   loader: LoaderCircle,
 };
 /**
