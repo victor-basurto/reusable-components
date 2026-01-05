@@ -46,3 +46,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   rel?: string;
   prefetch?: boolean;
 }
+/**
+ * Tooltip Types
+ * */
+export type TooltipPosition = "top" | "bottom" | "left" | "right";
+export type TooltipPositionClasses = Record<TooltipPosition, string>;
+export interface TooltipProps {
+  content: string;
+  position?: TooltipPosition;
+  children: React.ReactNode;
+  delay?: number;
+}
