@@ -26,53 +26,70 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 This project is a collection of reusable UI components built with Next.js (App Router), TypeScript, Tailwind CSS, and Radix UI primitives (where needed).
 Feel free to copy any component into your own project, extend it, or contribute new ones!
-Component Checklist
+Component Checklist:
+
+#### Navigation
+
+- [ ] `<Breadcrumbs>` – Navigation breadcrumb trail
+- [x] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
+- [ ] `<DropdownMenu>` – Right-click or button-triggered menu
+- [ ] `<NavigationMenu>` – Horizontal navigation with dropdowns (desktop-friendly)
+- [ ] `<Pagination>` – Page navigation with previous/next and page numbers
+- [ ] `<Tabs>` – Tabbed interface
+
+#### Cards
+
+- [ ] `<Avatar>` – Image or fallback avatar with status indicator
+- [ ] `<Badge>` – Small status/label badge with multiple variants
+- [ ] `<Card>` – Flexible card container with header, footer, and content slots
+- [ ] `<HoverCard>` – Card that appears on hover
+- [ ] `<Skeleton>` – Loading placeholder component
+
+#### Dialogs
+
+- [ ] `<Alert>` – Info, success, warning, and error alerts
+- [ ] `<AlertDialog>` – Destructive/confirm action modal
+- [ ] `<Combobox>` – Autocomplete / searchable dropdown
+- [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
+- [x] `<Icon>` – Simple Icon selector using Lucide Icons
+- [x] `<Popover>` – Small overlay triggered by hover/click
+- [ ] `<Sonner>` integration – Optional beautiful toast alternative
+- [x] `<Tooltip>` – Simple text tooltip
+- [x] `<Toast>` / `<Toaster>` – Notification system
+
+#### Form
 
 - [x] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
-- [ ] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
-- [ ] `<Textarea>` – Multiline text input with auto-resize option
-- [ ] `<Label>` – Accessible form label
 - [ ] `<Checkbox>` – Single checkbox with indeterminate state
+- [ ] `<Form>` + zod integration – Reusable form wrapper with validation
+- [ ] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
+- [ ] `<Label>` – Accessible form label
+- [ ] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<RadioGroup>` – Radio button group
 - [ ] `<Switch>` – Toggle switch
 - [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
-- [ ] `<Combobox>` – Autocomplete / searchable dropdown
-- [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
-- [x] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
-- [x] `<Popover>` – Small overlay triggered by hover/click
-- [x] `<Tooltip>` – Simple text tooltip
-- [x] `<Icon>` – Simple Icon selector using Lucide Icons
-- [x] `<Toast>` / `<Toaster>` – Notification system
-- [ ] `<Alert>` – Info, success, warning, and error alerts
-- [ ] `<AlertDialog>` – Destructive/confirm action modal
-- [ ] `<Card>` – Flexible card container with header, footer, and content slots
-- [ ] `<Avatar>` – Image or fallback avatar with status indicator
-- [ ] `<Badge>` – Small status/label badge with multiple variants
-- [ ] `<Skeleton>` – Loading placeholder component
-- [ ] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
-- [ ] `<Separator>` – Horizontal or vertical divider
-- [ ] `<Accordion>` – Collapsible content sections
-- [ ] `<Tabs>` – Tabbed interface
-- [ ] `<DropdownMenu>` – Right-click or button-triggered menu
-- [ ] `<NavigationMenu>` – Horizontal navigation with dropdowns (desktop-friendly)
-- [ ] `<Breadcrumbs>` – Navigation breadcrumb trail
-- [ ] `<Pagination>` – Page navigation with previous/next and page numbers
-- [ ] `<Table>` – Responsive data table with sorting, selection, etc.
-- [ ] `<DataTable>` – Advanced table with filtering, sorting, pagination (built on TanStack Table)
-- [ ] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<Slider>` – Range slider input
+- [ ] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
+- [ ] `<Textarea>` – Multiline text input with auto-resize option
 - [ ] `<Toggle>` – Single toggle button (like bold/italic in editors)
 - [ ] `<ToggleGroup>` – Group of toggle buttons (exclusive or multiple)
+
+#### Table
+
+- [ ] `<DataTable>` – Advanced table with filtering, sorting, pagination (built on TanStack Table)
+- [ ] `<Separator>` – Horizontal or vertical divider
+- [ ] `<Table>` – Responsive data table with sorting, selection, etc.
+
+#### Misc
+
+- [ ] `<Accordion>` – Collapsible content sections
 - [ ] `<AspectRatio>` – Maintain aspect ratio for images/videos
 - [ ] `<Carousel>` – Image/content carousel with swipe support
 - [ ] `<Command>` – Fast command palette (like Cmd+K menus)
-- [ ] `<Kbd>` – Keyboard key styling component
 - [ ] `<CopyButton>` – Button that copies text to clipboard
-- [ ] `<HoverCard>` – Card that appears on hover
+- [ ] `<ErrorBoundary>` – Component-level error boundary with fallback UI
+- [ ] `<Kbd>` – Keyboard key styling component
 - [ ] `<ScrollArea>` – Custom scrollbar area for long content
 - [ ] `<Sheet>` – Side sheet (alternative drawer implementation)
-- [ ] `<Sonner>` integration – Optional beautiful toast alternative
-- [ ] `<Form>` + zod integration – Reusable form wrapper with validation
-- [x] `<ThemeProvider>` & `<ThemeToggle>` – Dark/light mode switcher
-- [ ] `<ErrorBoundary>` – Component-level error boundary with fallback UI
 - [ ] `<SuspenseFallback>` – Standardized loading fallback for React Suspense
+- [x] `<ThemeProvider>` & `<ThemeToggle>` – Dark/light mode switcher
