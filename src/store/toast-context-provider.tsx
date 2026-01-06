@@ -2,13 +2,13 @@
 
 import { useCallback, useContext, useState } from "react";
 import { ToastContext } from "./toast-context";
+import { IconName } from "@/types/ui";
 import {
-  IconName,
   Toast,
   ToastBgStyles,
   ToastIconsRecord,
   ToastType,
-} from "@/types/ui";
+} from "@/types/provider";
 import { Icon } from "@/components/abstract/Icon";
 import { Button } from "@/components/ui/Button";
 

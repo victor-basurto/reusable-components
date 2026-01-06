@@ -1,6 +1,7 @@
 "use client";
-import DialogWithToast from "@/components/test-components/DialogWithToast";
-import UserSettings from "@/components/test-components/UserSettings";
+import NavDrawer from "@/components/Navigation/NavDrawer";
+import DialogWithToast from "@/components/page-content/DialogWithToast";
+import UserSettings from "@/components/page-content/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/Button";
 import Dialog from "@/components/ui/Dialog";
@@ -8,6 +9,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { DialogHandle } from "@/types/ui";
 import Image from "next/image";
 import { useRef } from "react";
+
 export default function Home() {
   const dialog = useRef<DialogHandle>(null);
   // TODO: use the proper `button` component
@@ -27,8 +29,10 @@ export default function Home() {
   const handleDialogOpen = () => {
     dialog.current?.open();
   };
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <NavDrawer />
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"

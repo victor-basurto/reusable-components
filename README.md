@@ -38,7 +38,7 @@ Component Checklist
 - [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
 - [ ] `<Combobox>` – Autocomplete / searchable dropdown
 - [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
-- [ ] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
+- [x] `<Drawer>` – Slide-in panel (mobile-friendly alternative to modal)
 - [x] `<Popover>` – Small overlay triggered by hover/click
 - [x] `<Tooltip>` – Simple text tooltip
 - [x] `<Icon>` – Simple Icon selector using Lucide Icons

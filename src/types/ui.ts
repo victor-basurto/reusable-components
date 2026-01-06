@@ -29,6 +29,7 @@ export type IconName =
   | "circlecheck"
   | "trianglealert"
   | "info"
+  | "logout"
   | "loader";
 export interface IconSelectorProps {
   name: IconName;
@@ -72,17 +73,13 @@ export interface PopoverProps {
   className?: string;
 }
 /**
- * Toast Types
+ * Drawer Types
  * */
-export type ToastType = "success" | "error" | "info" | "warning";
-export type ToastBgStyles = Record<ToastType, string>;
-export type ToastIconsRecord = Record<ToastType, IconName>;
-export interface Toast {
-  id: string;
-  message: string;
-  type?: ToastType;
-}
-export interface ToastContextType {
-  addToast: (message: string, type?: ToastType) => void;
-  removeToast: (id: string) => void;
+export type DrawerPlacement = "left" | "right";
+export interface DrawerProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title?: string;
+  children: React.ReactNode;
+  placement?: DrawerPlacement;
 }
