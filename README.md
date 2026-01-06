@@ -61,9 +61,9 @@ Component Checklist:
 
 - [x] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
 - [ ] `<Checkbox>` – Single checkbox with indeterminate state
-- [ ] `<Form>` + zod integration – Reusable form wrapper with validation
-- [ ] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
-- [ ] `<Label>` – Accessible form label
+- [x] `<Form>` + zod integration – Reusable form wrapper with validation
+- [x] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
+- [x] `<Label>` – Accessible form label
 - [ ] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<RadioGroup>` – Radio button group
 - [ ] `<Switch>` – Toggle switch
