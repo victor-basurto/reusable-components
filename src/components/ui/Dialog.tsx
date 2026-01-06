@@ -35,12 +35,30 @@ const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   }
 
   return createPortal(
-    <dialog id="modal" ref={dialog} className="">
-      <h2>{title}</h2>
-      {description}
-      <form method="dialog" id="dialog-actions">
-        {modalActions}
-      </form>
+    <dialog
+      id="modal"
+      ref={dialog}
+      className="backdrop:bg-black/50 backdrop:backdrop-blur-sm
+        fixed inset-0 m-auto
+        w-full max-w-md rounded-xl border border-border 
+        bg-background p-6 shadow-2xl
+        open:animate-in open:zoom-in-95 open:fade-in duration-200"
+    >
+      <div className="flex flex-col gap-4">
+        <h2 className="text-xl font-semibold text-foreground border-b border-border pb-2">
+          {title}
+        </h2>
+        <div className="text-sm text-foreground/80 leading-relaxed">
+          {description}
+        </div>
+        <form
+          method="dialog"
+          id="dialog-actions"
+          className="flex justify-end gap-3 mt-4"
+        >
+          {modalActions}
+        </form>
+      </div>
     </dialog>,
     dialogRoot,
   );

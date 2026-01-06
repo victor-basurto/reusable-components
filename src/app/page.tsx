@@ -1,4 +1,5 @@
 "use client";
+import DialogWithToast from "@/components/test-components/DialogWithToast";
 import UserSettings from "@/components/test-components/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/Button";
@@ -14,7 +15,7 @@ export default function Home() {
     <Button
       variant="danger"
       className="flex items-center gap-2 transition-all duration-300"
-      size="md"
+      size="sm"
     >
       close
     </Button>
@@ -108,6 +109,7 @@ export default function Home() {
           open dialog
         </Button>
         <UserSettings />
+        <DialogWithToast />
       </div>
     </div>
   );

@@ -2,7 +2,13 @@
 
 import { useCallback, useContext, useState } from "react";
 import { ToastContext } from "./toast-context";
-import { IconName, Toast, ToastType } from "@/types/ui";
+import {
+  IconName,
+  Toast,
+  ToastBgStyles,
+  ToastIconsRecord,
+  ToastType,
+} from "@/types/ui";
 import { Icon } from "@/components/abstract/Icon";
 import { Button } from "@/components/ui/Button";
 
@@ -53,16 +59,16 @@ const ToastItem = ({
   toast: Toast;
   onClose: () => void;
 }) => {
-  const bgStyles: Record<ToastType, string> = {
+  const bgStyles: ToastBgStyles = {
     success: "bg-green-600 text-white",
     error: "bg-red-600 text-white",
     warning: "bg-yellow-500 text-white",
-    info: "bg-primary text-primary-fg", // Uses your Indigo theme
+    info: "bg-primary text-primary-fg", // Uses Indigo theme
   };
-  const icons: Record<ToastType, string> = {
-    success: "circle-check",
-    error: "circle-x",
-    warning: "triangle-alert",
+  const icons: ToastIconsRecord = {
+    success: "circlecheck",
+    error: "circleclose",
+    warning: "trianglealert",
     info: "info",
   };
   return (
@@ -80,8 +86,9 @@ const ToastItem = ({
       <Button
         onClick={onClose}
         className="ml-4 hover:opacity-70 transition-opacity"
+        variant="ghost"
       >
-        <Icon name="close" className="w-4 h-4" />
+        <Icon name="circleclose" className="w-4 h-4" />
       </Button>
     </div>
   );

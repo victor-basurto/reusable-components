@@ -75,6 +75,8 @@ export interface PopoverProps {
  * Toast Types
  * */
 export type ToastType = "success" | "error" | "info" | "warning";
+export type ToastBgStyles = Record<ToastType, string>;
+export type ToastIconsRecord = Record<ToastType, IconName>;
 export interface Toast {
   id: string;
   message: string;
