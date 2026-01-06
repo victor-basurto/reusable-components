@@ -1,6 +1,7 @@
 "use client";
 import NavDrawer from "@/components/Navigation/NavDrawer";
 import DialogWithToast from "@/components/page-content/DialogWithToast";
+import { LoginForm } from "@/components/page-content/LoginForm";
 import UserSettings from "@/components/page-content/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/Button";
@@ -114,6 +115,7 @@ export default function Home() {
         </Button>
         <UserSettings />
         <DialogWithToast />
+        <LoginForm />
       </div>
     </div>
   );

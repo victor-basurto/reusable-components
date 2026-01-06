@@ -30,7 +30,10 @@ export type IconName =
   | "trianglealert"
   | "info"
   | "logout"
-  | "loader";
+  | "loader"
+  | "email"
+  | "atsign"
+  | "lock";
 export interface IconSelectorProps {
   name: IconName;
   className?: string;

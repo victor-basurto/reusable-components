@@ -16,6 +16,9 @@ import {
   CircleCheck,
   TriangleAlert,
   LogOut,
+  Mail,
+  AtSign,
+  Lock
 } from "lucide-react";
 
 const icons: Record<IconName, FC<{ className?: string }>> = {
@@ -33,6 +36,9 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   trianglealert: TriangleAlert,
   loader: LoaderCircle,
   logout: LogOut,
+  email: Mail,
+  atsign: AtSign,
+  lock: Lock,
 };
 /**
  * @name Icon
