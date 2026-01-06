@@ -50,7 +50,6 @@ export default function ThemeContextProvider({
 
   // toggle theme
   const handleToggleTheme = () => {
-    console.log("toggletheme nowww..... ");
     setTheme((prevTheme: Theme) => {
       const newTheme = prevTheme === "light" ? "dark" : "light";
 

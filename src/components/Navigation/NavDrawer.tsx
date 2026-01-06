@@ -11,7 +11,6 @@ export default function NavDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { addToast } = useToast();
 
-  console.log("init");
   const handleAction = (name: string) => {
     addToast(`${name} feature coming soon!`, "info");
     setIsDrawerOpen(false);

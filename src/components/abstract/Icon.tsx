@@ -43,6 +43,5 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
  */
 export const Icon = ({ name, className }: IconSelectorProps): JSX.Element => {
   const SelectedIcon = icons[name];
-  console.log(SelectedIcon);
   return <SelectedIcon className={className} />;
 };
