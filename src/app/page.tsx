@@ -1,7 +1,7 @@
 "use client";
 import NavDrawer from "@/components/Navigation/NavDrawer";
 import DialogWithToast from "@/components/page-content/DialogWithToast";
-import { LoginForm } from "@/components/page-content/LoginForm";
+import { SimpleForm } from "@/components/page-content/SimpleForm";
 import UserSettings from "@/components/page-content/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/Button";
@@ -93,6 +93,12 @@ export default function Home() {
             Documentation
           </Button>
         </div>
+
+        <div className="mt-20 form-section">
+          <div>Form Component</div>
+          <hr className="my-2 border-border" />
+          <SimpleForm />
+        </div>
       </main>
       <div className="grid gap-4">
         {/* TODO: move `<ToggleTheme>` to header component when ready */}
@@ -115,7 +121,6 @@ export default function Home() {
         </Button>
         <UserSettings />
         <DialogWithToast />
-        <LoginForm />
       </div>
     </div>
   );

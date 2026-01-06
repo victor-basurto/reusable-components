@@ -18,7 +18,11 @@ import {
   LogOut,
   Mail,
   AtSign,
-  Lock
+  Lock,
+  MapPinHouse,
+  Building2,
+  Binary,
+  Phone,
 } from "lucide-react";
 
 const icons: Record<IconName, FC<{ className?: string }>> = {
@@ -39,6 +43,10 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   email: Mail,
   atsign: AtSign,
   lock: Lock,
+  mapPinHouse: MapPinHouse,
+  building: Building2,
+  binary: Binary,
+  phone: Phone,
 };
 /**
  * @name Icon

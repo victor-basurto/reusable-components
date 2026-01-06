@@ -33,6 +33,10 @@ export type IconName =
   | "loader"
   | "email"
   | "atsign"
+  | "mapPinHouse"
+  | "building"
+  | "binary"
+  | "phone"
   | "lock";
 export interface IconSelectorProps {
   name: IconName;

@@ -3,6 +3,7 @@ import { useToast } from "@/store/toast-context-provider";
 import { Button } from "../ui/Button";
 import { Icon } from "../abstract/Icon";
 import { Drawer } from "../ui/Drawer";
+import { LoginForm } from "@/components/page-content/LoginForm";
 
 export default function NavDrawer() {
   /*
@@ -16,8 +17,10 @@ export default function NavDrawer() {
     setIsDrawerOpen(false);
   };
   return (
-    <nav className="p-4 border-b border-border flex justify-between items-center">
-      <span className="font-bold text-primary text-xl">Drawer component</span>
+    <nav className="p-4 border-b border-border flex justify-start items-start">
+      <span className="font-bold text-primary text-xl mr-4">
+        Drawer component
+      </span>
       {/* Trigger for the Drawer */}
       <Button
         variant="outline"
@@ -55,6 +58,8 @@ export default function NavDrawer() {
           >
             <Icon name="logout" className="w-4 h-4 mr-2" /> Logout
           </Button>
+
+          <LoginForm />
         </div>
       </Drawer>
     </nav>
