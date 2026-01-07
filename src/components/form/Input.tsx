@@ -52,7 +52,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {error ? (
-          <p className="text-xs font-medium text-red-500 animate-in fade-in slide-in-form-top-1">
+          <p className="text-xs font-medium !text-red-500 animate-in fade-in slide-in-form-top-1">
             {error}
           </p>
         ) : helperText ? (

@@ -4,6 +4,7 @@ import { Form } from "../form/Form";
 import { Input } from "../form/Input";
 import { Icon } from "../abstract/Icon";
 import { Button } from "../ui/Button";
+import { Checkbox } from "../form/Checkbox";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -12,10 +13,17 @@ import { Button } from "../ui/Button";
  * zipCode
  * */
 const loginSchema = z.object({
-  email: z.email("invalid email"),
+  email: z.email("Invalid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
-  phone: z.number().min(9, "Enter proper phone number"),
-  zipCode: z.number().min(5, "Invalid ZipCode"),
+  // NOTE: HTML inputs usually return strings.
+  // If your Input component returns a string, use z.string().regex()
+  // or use z.coerce.number()
+  phone: z.coerce.number().min(900000000, "Enter proper phone number"),
+  zipCode: z.coerce.number().min(10000, "Invalid ZipCode"),
+  // z.boolean() takes an options object, not a boolean literal
+  acceptTerms: z.boolean().refine((v) => v === true, {
+    message: "You must accept the terms",
+  }),
 });
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
@@ -106,7 +114,14 @@ export function SimpleForm() {
                 {...register("zipCode")}
               />
             </div>
-            <div className="col-span-full md:col-span-full">
+            <div className="col-span-full">
+              <Checkbox
+                label="I accept the XMCloud terms of service"
+                error={errors.acceptTerms?.message}
+                {...register("acceptTerms")}
+              />
+            </div>
+            <div className="col-span-full">
               <Button
                 type="submit"
                 variant="primary"

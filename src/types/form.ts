@@ -18,7 +18,9 @@ export interface FieldProps {
   required?: boolean;
 }
 // Input Types
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, FieldProps {
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+    FieldProps {
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
 }
@@ -26,7 +28,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>,
 export interface FormProps<
   TSchema extends z.ZodTypeAny,
   // Ensure the inferred type satisfies react-hook-form's FieldValues
-  TFieldValues extends FieldValues = z.infer<TSchema> & FieldValues
+  TFieldValues extends FieldValues = z.infer<TSchema> & FieldValues,
 > {
   // Zod schema for the form. We keep the concrete schema type so callers
   // can preserve strong types and we can infer the form value shape.
@@ -36,4 +38,12 @@ export interface FormProps<
   children: (methods: UseFormReturn<TFieldValues>) => React.ReactNode;
   className?: string;
   defaultValues?: DefaultValues<TFieldValues>;
+}
+// Checkbox Types
+export interface CheckboxProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+  label?: string;
+  error?: string;
+  indeterminate?: boolean;
+  helperText?: string;
 }
