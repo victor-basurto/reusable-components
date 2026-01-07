@@ -64,7 +64,7 @@ Component Checklist:
 - [x] `<Form>` + zod integration – Reusable form wrapper with validation
 - [x] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
 - [x] `<Label>` – Accessible form label
-- [ ] `<Progress>` – Progress bar (determinate & indeterminate)
+- [x] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<RadioGroup>` – Radio button group
 - [ ] `<Switch>` – Toggle switch
 - [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
