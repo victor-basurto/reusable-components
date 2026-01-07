@@ -36,6 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       sm: "h-9 px-3",
       md: "h-10 px-4 py-2",
       lg: "h-11 px-8 text-base",
+      none: "",
     };
 
     // Constructing the final class string manually

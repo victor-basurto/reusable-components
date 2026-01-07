@@ -11,7 +11,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const internalRef = useRef<HTMLInputElement>(null);
     const combinedRef =
       (ref as React.RefObject<HTMLInputElement>) || internalRef;
-    const checkboxId = id || React.useId();
+    const generatedId = React.useId();
+    const checkboxId = id || generatedId;
     useEffect(() => {
       if (combinedRef.current) {
         combinedRef.current.indeterminate = !!indeterminate;
@@ -25,9 +26,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             id={checkboxId}
             ref={combinedRef}
             className={cn(
-              "h-4 w-4 rounded border-border text-primary focus:ring-primary focus:ring-offset-background",
-              "accent-primary cursor-pointer disabled:cursor-not-allowed disabled:opacity-50",
-              error && "border-red-500",
+              " h-4 w-4 rounded border-border text-primary focus:ring-primary focus:ring-offset-background",
+              " accent-primary cursor-pointer disabled:cursor-not-allowed disabled:opacity-50",
+              error && " border-red-500",
               className,
             )}
             {...props}
@@ -39,11 +40,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           )}
         </div>
         {error ? (
-          <p className="text-xs font-medium !text-red-500 animate-in fade-in slide-in-form-top-1">
+          <p className=" text-xs font-medium !text-red-500 animate-in fade-in slide-in-form-top-1">
             {error}
           </p>
         ) : helperText ? (
-          <p className="text-xs text-foreground/50">{helperText}</p>
+          <p className=" text-xs text-foreground/50">{helperText}</p>
         ) : null}
       </div>
     );

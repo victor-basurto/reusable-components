@@ -47,7 +47,7 @@ export interface IconSelectorProps {
  * Button Types
  * */
 // button variants
-export type ButtonSize = "sm" | "md" | "lg";
+export type ButtonSize = "sm" | "md" | "lg" | "none";
 export type ButtonVariant = "primary" | "ghost" | "outline" | "danger";
 export type ButtonVariantStyles = Record<ButtonVariant, string>;
 export type ButtonSizeStyles = Record<ButtonSize, string>;

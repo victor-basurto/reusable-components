@@ -66,7 +66,7 @@ Component Checklist:
 - [x] `<Label>` – Accessible form label
 - [x] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<RadioGroup>` – Radio button group
-- [ ] `<Switch>` – Toggle switch
+- [x] `<Switch>` – Toggle switch
 - [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
 - [ ] `<Slider>` – Range slider input
 - [ ] `<Spinner>` / `<Loader>` – Loading spinners in various sizes

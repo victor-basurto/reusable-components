@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import { ProgressTypes } from "@/types/form";
+import { ProgressProps } from "@/types/form";
 
-export const Progress = ({ value, className, showValue }: ProgressTypes) => {
+export const Progress = ({ value, className, showValue }: ProgressProps) => {
   const isIndeterminate = value === undefined;
   const safeValue = Math.min(Math.max(value || 0, 0), 100);
 
@@ -9,15 +9,17 @@ export const Progress = ({ value, className, showValue }: ProgressTypes) => {
     <div className="block w-full">
       <div
         className={cn(
-          "relative h-2 w-full overflow-hidden rounded-full bg-border",
+          " relative h-2 w-full overflow-hidden rounded-full bg-border",
           className,
         )}
         role="progressbar"
       >
         <div
           className={cn(
-            "h-full w-full bg-primary transition-transform duration-500",
-            isIndeterminate ? "animate-progress-indeterminate origin-left" : "",
+            " h-full w-full bg-primary transition-transform duration-500",
+            isIndeterminate
+              ? " animate-progress-indeterminate origin-left"
+              : "",
           )}
           style={{
             // translateX(-100%) = 0% progress

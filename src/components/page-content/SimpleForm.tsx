@@ -5,6 +5,8 @@ import { Input } from "../form/Input";
 import { Icon } from "../abstract/Icon";
 import { Button } from "../ui/Button";
 import { Checkbox } from "../form/Checkbox";
+import { Controller } from "react-hook-form";
+import { Switch } from "../form/Switch";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -24,6 +26,9 @@ const loginSchema = z.object({
   acceptTerms: z.boolean().refine((v) => v === true, {
     message: "You must accept the terms",
   }),
+  notifications: z.boolean().refine((v) => v === true, {
+    message: "Please mark or unmark notifications",
+  }),
 });
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
@@ -35,7 +40,7 @@ export function SimpleForm() {
   return (
     <div className="mx-auto mt-4 p-6 border border-border reounded-xl">
       <Form schema={loginSchema} onSubmit={onSubmit}>
-        {({ register, formState: { errors, isSubmitting } }) => (
+        {({ control, register, formState: { errors, isSubmitting } }) => (
           <div className="grid grid-cols-6 gap-3">
             <div className="col-span-full lg:col-[1/4]">
               <Input
@@ -119,6 +124,20 @@ export function SimpleForm() {
                 label="I accept the XMCloud terms of service"
                 error={errors.acceptTerms?.message}
                 {...register("acceptTerms")}
+              />
+            </div>
+
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="notifications"
+                render={({ field }) => (
+                  <Switch
+                    label="Enable email notifications"
+                    checked={!!field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                )}
               />
             </div>
             <div className="col-span-full">

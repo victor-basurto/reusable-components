@@ -39,6 +39,11 @@ export interface InputProps
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
 }
+// Label Types
+export interface LabelProps
+  extends React.BlockquoteHTMLAttributes<HTMLLabelElement> {
+  children: React.ReactNode;
+}
 // Checkbox Types
 export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
@@ -48,8 +53,17 @@ export interface CheckboxProps
   helperText?: string;
 }
 // Progress Types
-export interface ProgressTypes {
+export interface ProgressProps {
   value?: number; // 0-100. If undefined, it becomes indeterminate
   className?: string;
   showValue?: boolean;
+}
+// Switch Types
+export interface SwitchProps {
+  id?: string;
+  checked: boolean;
+  onCheckedChange: (checked: boolean) => void;
+  label?: string;
+  disabled?: boolean;
+  className?: string;
 }
