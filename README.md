@@ -60,7 +60,7 @@ Component Checklist:
 #### Form
 
 - [x] `<Button>` – Versatile button with variants (primary, secondary, outline, ghost, destructive), sizes, loading state, and icon support
-- [ ] `<Checkbox>` – Single checkbox with indeterminate state
+- [x] `<Checkbox>` – Single checkbox with indeterminate state
 - [x] `<Form>` + zod integration – Reusable form wrapper with validation
 - [x] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
 - [x] `<Label>` – Accessible form label
