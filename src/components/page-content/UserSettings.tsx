@@ -8,7 +8,8 @@ export default function UserSettings() {
       <Popover
         trigger={
           <Button variant="outline" size="md">
-            <Icon name="settings" className="w-4 h-4" />
+            Open Popover
+            <Icon name="settings" className="ml-2 w-4 h-4" />
           </Button>
         }
       >

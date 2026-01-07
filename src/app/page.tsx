@@ -1,6 +1,7 @@
 "use client";
 import NavDrawer from "@/components/Navigation/NavDrawer";
 import DialogWithToast from "@/components/page-content/DialogWithToast";
+import ProgressBarV1 from "@/components/page-content/ProgressBarV1";
 import { SimpleForm } from "@/components/page-content/SimpleForm";
 import UserSettings from "@/components/page-content/UserSettings";
 import ToggleTheme from "@/components/ToggleTheme";
@@ -100,7 +101,7 @@ export default function Home() {
           <SimpleForm />
         </div>
       </main>
-      <div className="grid gap-4">
+      <div className="grid gap-4 justify-items-center justify-center items-center">
         {/* TODO: move `<ToggleTheme>` to header component when ready */}
         <ToggleTheme />
 
@@ -121,6 +122,7 @@ export default function Home() {
         </Button>
         <UserSettings />
         <DialogWithToast />
+        <ProgressBarV1 />
       </div>
     </div>
   );

@@ -9,21 +9,6 @@ import * as z from "zod";
 // ================================================
 // FORM Types
 // ================================================
-// Field Types
-export interface FieldProps {
-  label?: string;
-  helperText?: string;
-  error?: string;
-  className?: string;
-  required?: boolean;
-}
-// Input Types
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    FieldProps {
-  prefixIcon?: React.ReactNode;
-  suffixIcon?: React.ReactNode;
-}
 // Form Types
 export interface FormProps<
   TSchema extends z.ZodTypeAny,
@@ -39,6 +24,21 @@ export interface FormProps<
   className?: string;
   defaultValues?: DefaultValues<TFieldValues>;
 }
+// Field Types
+export interface FieldProps {
+  label?: string;
+  helperText?: string;
+  error?: string;
+  className?: string;
+  required?: boolean;
+}
+// Input Types
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+    FieldProps {
+  prefixIcon?: React.ReactNode;
+  suffixIcon?: React.ReactNode;
+}
 // Checkbox Types
 export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
@@ -46,4 +46,10 @@ export interface CheckboxProps
   error?: string;
   indeterminate?: boolean;
   helperText?: string;
+}
+// Progress Types
+export interface ProgressTypes {
+  value?: number; // 0-100. If undefined, it becomes indeterminate
+  className?: string;
+  showValue?: boolean;
 }
