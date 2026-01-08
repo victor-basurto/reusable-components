@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { SelectPtops } from "@/types/form";
+import { SelectProps } from "@/types/form";
 import { useEffect, useId, useRef, useState } from "react";
 import { Label } from "./Label";
 import { Button } from "../ui/Button";
@@ -17,7 +17,7 @@ export const Select = ({
   helperText,
   className,
   disabled,
-}: SelectPtops) => {
+}: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const selectId = useId();

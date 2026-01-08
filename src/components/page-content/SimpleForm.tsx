@@ -8,6 +8,7 @@ import { Button } from "../ui/Button";
 import { Checkbox } from "../form/Checkbox";
 import { Switch } from "../form/Switch";
 import { Select } from "../form/Select";
+import { TextArea } from "../form/Textarea";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -15,7 +16,6 @@ import { Select } from "../form/Select";
  * phone
  * zipCode
  * */
-const roles = ["dev", "design", "manager"] as const;
 const loginSchema = z.object({
   email: z.email("Invalid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
@@ -172,6 +172,10 @@ export function SimpleForm() {
               >
                 Log in
               </Button>
+            </div>
+
+            <div className="col-span-full">
+              <TextArea label="About you" placeholder="Enter your info..." />
             </div>
           </div>
         )}

@@ -73,10 +73,17 @@ export interface SelectOption {
   value: string;
 }
 // Select Types
-export interface SelectPtops extends FieldProps {
+export interface SelectProps extends FieldProps {
   options: SelectOption[];
   value?: string;
   onChange: (value: string) => void;
   placeholder?: string;
   disabled?: boolean;
+}
+// Textarea Types
+export interface TextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label?: string;
+  error?: string;
+  helperText?: string;
 }
