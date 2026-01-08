@@ -1,5 +1,5 @@
-@use "./dark";
-@use "./light";
+@use "./dark" as d;
+@use "./light" as l;
 :root {
   --body-bg: #fff;
   --body-color: #333;
@@ -9,4 +9,11 @@
   --text-color: #1a1a1a;
   --text-foreground: #1a1a1a;
   --border-color: #e0e0e0;
+  @include l.light-theme;
+}
+.light {
+  @include l.light-theme;
+}
+.dark {
+  @include d.dark-theme;
 }

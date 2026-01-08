@@ -98,7 +98,6 @@ export const Select = ({
       ) : helperText ? (
         <p className="text-xs text-foreground/50">{helperText}</p>
       ) : null}
-      )
     </div>
   );
 };

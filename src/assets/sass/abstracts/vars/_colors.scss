@@ -9,5 +9,8 @@
 .text-forground {
   color: var(--primary-foreground);
 }
+.bg-background {
+  background-color: var(--bg-color);
+}
 $body-color: var(--body-color);
 $body-bg: var(--body-bg);

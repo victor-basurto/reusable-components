@@ -104,7 +104,6 @@ export function SimpleForm() {
                 className="w-full"
               />
             </div>
-            {/* TODO: replace with Dropdown component */}
             <div className="col-span-full lg:col-[3/5]">
               <Input
                 label="State"
