@@ -23,6 +23,8 @@ import {
   Building2,
   Binary,
   Phone,
+  Check,
+  ChevronDown,
 } from "lucide-react";
 
 const icons: Record<IconName, FC<{ className?: string }>> = {
@@ -47,6 +49,8 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
   building: Building2,
   binary: Binary,
   phone: Phone,
+  check: Check,
+  chevrondown: ChevronDown,
 };
 /**
  * @name Icon

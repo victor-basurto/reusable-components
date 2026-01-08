@@ -67,7 +67,7 @@ Component Checklist:
 - [x] `<Progress>` – Progress bar (determinate & indeterminate)
 - [ ] `<RadioGroup>` – Radio button group
 - [x] `<Switch>` – Toggle switch
-- [ ] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
+- [x] `<Select>` – Custom dropdown/select (using Radix + Headless UI style)
 - [ ] `<Slider>` – Range slider input
 - [ ] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
 - [ ] `<Textarea>` – Multiline text input with auto-resize option

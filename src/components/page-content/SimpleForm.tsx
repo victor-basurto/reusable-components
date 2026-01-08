@@ -1,12 +1,13 @@
 import { useToast } from "@/store/toast-context-provider";
 import { z } from "zod";
+import { Controller } from "react-hook-form";
 import { Form } from "../form/Form";
 import { Input } from "../form/Input";
 import { Icon } from "../abstract/Icon";
 import { Button } from "../ui/Button";
 import { Checkbox } from "../form/Checkbox";
-import { Controller } from "react-hook-form";
 import { Switch } from "../form/Switch";
+import { Select } from "../form/Select";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -14,6 +15,7 @@ import { Switch } from "../form/Switch";
  * phone
  * zipCode
  * */
+const roles = ["dev", "design", "manager"] as const;
 const loginSchema = z.object({
   email: z.email("Invalid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
@@ -29,6 +31,7 @@ const loginSchema = z.object({
   notifications: z.boolean().refine((v) => v === true, {
     message: "Please mark or unmark notifications",
   }),
+  role: z.string("Please select a job title").min(1),
 });
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
@@ -136,6 +139,26 @@ export function SimpleForm() {
                     label="Enable email notifications"
                     checked={!!field.value}
                     onCheckedChange={field.onChange}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="role"
+                render={({ field, fieldState }) => (
+                  <Select
+                    label="Your Role"
+                    placeholder="Chooose a job title..."
+                    options={[
+                      { label: "Developer", value: "dev" },
+                      { label: "Designer", value: "design" },
+                      { label: "Manager", value: "manager" },
+                    ]}
+                    value={field.value}
+                    onChange={field.onChange}
+                    error={fieldState.error?.message}
                   />
                 )}
               />

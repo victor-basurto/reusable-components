@@ -67,3 +67,16 @@ export interface SwitchProps {
   disabled?: boolean;
   className?: string;
 }
+// SelectOption Types
+export interface SelectOption {
+  label: string;
+  value: string;
+}
+// Select Types
+export interface SelectPtops extends FieldProps {
+  options: SelectOption[];
+  value?: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  disabled?: boolean;
+}

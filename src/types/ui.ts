@@ -37,6 +37,8 @@ export type IconName =
   | "building"
   | "binary"
   | "phone"
+  | "check"
+  | "chevrondown"
   | "lock";
 export interface IconSelectorProps {
   name: IconName;
