@@ -9,12 +9,17 @@ import { Checkbox } from "../form/Checkbox";
 import { Switch } from "../form/Switch";
 import { Select } from "../form/Select";
 import { TextArea } from "../form/Textarea";
+import { RadioGroup } from "../form/RadioGroup";
 /**
  * for this example we are creating a form validating the following fields:
  * email
  * password
  * phone
  * zipCode
+ * acceptTerms
+ * notifications
+ * role
+ * plan
  * */
 const loginSchema = z.object({
   email: z.email("Invalid email"),
@@ -32,6 +37,7 @@ const loginSchema = z.object({
     message: "Please mark or unmark notifications",
   }),
   role: z.string("Please select a job title").min(1),
+  plan: z.string("Please select a plan").min(1),
 });
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
@@ -45,6 +51,7 @@ export function SimpleForm() {
       <Form schema={loginSchema} onSubmit={onSubmit}>
         {({ control, register, formState: { errors, isSubmitting } }) => (
           <div className="grid grid-cols-6 gap-3">
+            {/* Input */}
             <div className="col-span-full lg:col-[1/4]">
               <Input
                 label="Email Address"
@@ -56,6 +63,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Input */}
             <div className="col-span-full lg:col-[4/7]">
               <Input
                 label="Password"
@@ -68,6 +76,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Input */}
             <div className="col-span-full">
               <Input
                 label="Address"
@@ -77,6 +86,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Input */}
             <div className="col-span-full lg:col-[1/4]">
               <Input
                 label="Address 2"
@@ -86,6 +96,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Input */}
             <div className="col-span-full lg:col-[4/7]">
               <Input
                 label="Phone"
@@ -96,6 +107,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Input */}
             <div className="col-span-full lg:col-[1/3]">
               <Input
                 label="City"
@@ -104,6 +116,8 @@ export function SimpleForm() {
                 className="w-full"
               />
             </div>
+
+            {/* Input */}
             <div className="col-span-full lg:col-[3/5]">
               <Input
                 label="State"
@@ -112,6 +126,8 @@ export function SimpleForm() {
                 className="w-full"
               />
             </div>
+
+            {/* Input */}
             <div className="col-span-full lg:col-[5/7]">
               <Input
                 label="Zip"
@@ -121,6 +137,8 @@ export function SimpleForm() {
                 {...register("zipCode")}
               />
             </div>
+
+            {/* Checkbox */}
             <div className="col-span-full">
               <Checkbox
                 label="I accept the XMCloud terms of service"
@@ -129,6 +147,7 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* Switch */}
             <div className="col-span-full">
               <Controller
                 control={control}
@@ -142,6 +161,8 @@ export function SimpleForm() {
                 )}
               />
             </div>
+
+            {/* Select */}
             <div className="col-span-full">
               <Controller
                 control={control}
@@ -162,6 +183,34 @@ export function SimpleForm() {
                 )}
               />
             </div>
+
+            {/* RadioGroup */}
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="plan"
+                render={({ field, fieldState }) => (
+                  <RadioGroup
+                    label="Select a Plan"
+                    name="plan"
+                    options={[
+                      { label: "Free ($0/mo)", value: "free" },
+                      { label: "Pro ($19/mo)", value: "pro" },
+                    ]}
+                    value={field.value}
+                    onChange={field.onChange}
+                    error={fieldState.error?.message}
+                  />
+                )}
+              />
+            </div>
+
+            {/* TextArea */}
+            <div className="col-span-full">
+              <TextArea label="About you" placeholder="Enter your info..." />
+            </div>
+
+            {/* Button */}
             <div className="col-span-full">
               <Button
                 type="submit"
@@ -170,12 +219,8 @@ export function SimpleForm() {
                 className="w-full"
                 isLoading={isSubmitting}
               >
-                Log in
+                Subscribe
               </Button>
-            </div>
-
-            <div className="col-span-full">
-              <TextArea label="About you" placeholder="Enter your info..." />
             </div>
           </div>
         )}

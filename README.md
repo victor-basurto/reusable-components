@@ -65,12 +65,12 @@ Component Checklist:
 - [x] `<Input>` – Text input with label, error state, helper text, and prefix/suffix support
 - [x] `<Label>` – Accessible form label
 - [x] `<Progress>` – Progress bar (determinate & indeterminate)
-- [ ] `<RadioGroup>` – Radio button group
+- [x] `<RadioGroup>` – Radio button group
 - [x] `<Switch>` – Toggle switch
 - [x] `<Select>` – Custom dropdown/select
 - [ ] `<Slider>` – Range slider input
 - [x] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
-- [ ] `<Textarea>` – Multiline text input with auto-resize option
+- [x] `<Textarea>` – Multiline text input with auto-resize option
 - [ ] `<Toggle>` – Single toggle button (like bold/italic in editors)
 - [ ] `<ToggleGroup>` – Group of toggle buttons (exclusive or multiple)
 
