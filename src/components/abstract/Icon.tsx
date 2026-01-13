@@ -61,5 +61,8 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
  */
 export const Icon = ({ name, className }: IconSelectorProps): JSX.Element => {
   const SelectedIcon = icons[name];
+  if (!SelectedIcon) {
+    return <span className={className}>({name})?</span>; // default icon or nothing
+  }
   return <SelectedIcon className={className} />;
 };
