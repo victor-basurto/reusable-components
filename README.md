@@ -68,11 +68,11 @@ Component Checklist:
 - [x] `<RadioGroup>` – Radio button group
 - [x] `<Switch>` – Toggle switch
 - [x] `<Select>` – Custom dropdown/select
-- [ ] `<Slider>` – Range slider input
+- [x] `<Slider>` – Range slider input
 - [x] `<Spinner>` / `<Loader>` – Loading spinners in various sizes
 - [x] `<Textarea>` – Multiline text input with auto-resize option
-- [ ] `<Toggle>` – Single toggle button (like bold/italic in editors)
-- [ ] `<ToggleGroup>` – Group of toggle buttons (exclusive or multiple)
+- [x] `<Toggle>` – Single toggle button (like bold/italic in editors)
+- [x] `<ToggleGroup>` – Group of toggle buttons (exclusive or multiple)
 
 #### Table
 

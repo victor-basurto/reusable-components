@@ -1,7 +1,12 @@
 import { cn } from "@/lib/utils";
 import { ProgressProps } from "@/types/form";
+import React from "react";
 
-export const Progress = ({ value, className, showValue }: ProgressProps) => {
+export const Progress: React.FC<ProgressProps> = ({
+  value,
+  className,
+  showValue,
+}) => {
   const isIndeterminate = value === undefined;
   const safeValue = Math.min(Math.max(value || 0, 0), 100);
 

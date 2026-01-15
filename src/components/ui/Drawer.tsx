@@ -1,16 +1,16 @@
 "use client";
 import { DrawerProps } from "@/types/ui";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "./Button";
 import { Icon } from "../abstract/Icon";
-export const Drawer = ({
+export const Drawer: React.FC<DrawerProps> = ({
   isOpen,
   onClose,
   title,
   children,
   placement = "right",
-}: DrawerProps) => {
+}) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);

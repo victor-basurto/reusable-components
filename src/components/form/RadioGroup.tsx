@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 import { RadioGroupProps } from "@/types/form";
 import { Label } from "./Label";
+import React from "react";
 
-export const RadioGroup = ({
+export const RadioGroup: React.FC<RadioGroupProps> = ({
   label,
   name,
   options,
@@ -10,7 +11,7 @@ export const RadioGroup = ({
   onChange,
   error,
   className,
-}: RadioGroupProps) => {
+}) => {
   return (
     <div className={cn("flex flex-col gap-3", className)}>
       {label ?? <Label className="text-base mb-1">{label}</Label>}

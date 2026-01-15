@@ -34,19 +34,19 @@ export interface FieldProps {
 }
 // Input Types
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    FieldProps {
+  extends React.InputHTMLAttributes<HTMLInputElement>, FieldProps {
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
 }
 // Label Types
-export interface LabelProps
-  extends React.BlockquoteHTMLAttributes<HTMLLabelElement> {
+export interface LabelProps extends React.BlockquoteHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode;
 }
 // Checkbox Types
-export interface CheckboxProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+export interface CheckboxProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "type"
+> {
   label?: string;
   error?: string;
   indeterminate?: boolean;
@@ -81,8 +81,7 @@ export interface SelectProps extends FieldProps {
   disabled?: boolean;
 }
 // Textarea Types
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   error?: string;
   helperText?: string;
@@ -101,3 +100,39 @@ export interface RadioGroupProps {
   error?: string;
   className?: string;
 }
+// Toggle Types
+export interface ToggleProps {
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  label?: string;
+  disabled?: boolean;
+  className?: string;
+  id?: string;
+}
+// ToggleOption Types
+export type ToggleOption = {
+  label: string;
+  value: string;
+  disabled?: boolean;
+};
+// ToggleGroup Types
+export type ToggleGroupProps = {
+  options: ToggleOption[];
+  value: string[]; // Array for multi-select
+  onChange: (selected: string[]) => void;
+  label?: string;
+  className?: string;
+  disabled?: boolean;
+};
+// Slider Types
+export type SliderProps = {
+  value: number;
+  min?: number;
+  max?: number;
+  step?: number;
+  onChange: (value: number) => void;
+  label?: string;
+  disabled?: boolean;
+  className?: string;
+  id?: string;
+};

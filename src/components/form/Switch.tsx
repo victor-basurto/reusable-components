@@ -4,14 +4,14 @@ import React from "react";
 import { Button } from "../ui/Button";
 import { Label } from "./Label";
 
-export const Switch = ({
+export const Switch: React.FC<SwitchProps> = ({
   checked,
   onCheckedChange,
   label,
   disabled,
   className,
   id,
-}: SwitchProps) => {
+}) => {
   const generatedId = React.useId();
   const switchId = id || generatedId;
   return (

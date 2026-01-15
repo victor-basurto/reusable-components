@@ -10,6 +10,9 @@ import { Switch } from "../form/Switch";
 import { Select } from "../form/Select";
 import { TextArea } from "../form/Textarea";
 import { RadioGroup } from "../form/RadioGroup";
+import Slider from "../form/Slider";
+import Toggle from "../form/Toggle";
+import ToggleGroup from "../form/ToggleGroup";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -38,6 +41,9 @@ const loginSchema = z.object({
   }),
   role: z.string("Please select a job title").min(1),
   plan: z.string("Please select a plan").min(1),
+  sliderValue: z.number().min(0, "Minimum is 0").max(100, "Maximum is 100"),
+  toggleValue: z.boolean(),
+  toggleGroupValue: z.array(z.string()).min(1, "Select at least one option"),
 });
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
@@ -208,6 +214,59 @@ export function SimpleForm() {
             {/* TextArea */}
             <div className="col-span-full">
               <TextArea label="About you" placeholder="Enter your info..." />
+            </div>
+            {/* Slider */}
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="sliderValue"
+                defaultValue={50}
+                render={({ field }) => (
+                  <Slider
+                    label="Volume"
+                    min={0}
+                    max={100}
+                    step={1}
+                    value={field.value}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
+            </div>
+            {/* Single Toggle */}
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="toggleValue"
+                defaultValue={false}
+                render={({ field }) => (
+                  <Toggle
+                    label="Enable Feature"
+                    checked={field.value}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
+            </div>
+            {/* ToggleGroup */}
+            <div className="col-span-full">
+              <Controller
+                control={control}
+                name="toggleGroupValue"
+                defaultValue={[]}
+                render={({ field }) => (
+                  <ToggleGroup
+                    label="Select Options"
+                    options={[
+                      { label: "Option A", value: "A" },
+                      { label: "Option B", value: "B" },
+                      { label: "Option C", value: "C" },
+                    ]}
+                    value={field.value}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
             </div>
 
             {/* Button */}

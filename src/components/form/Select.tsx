@@ -2,12 +2,12 @@
 
 import { cn } from "@/lib/utils";
 import { SelectProps } from "@/types/form";
-import { useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import { Label } from "./Label";
 import { Button } from "../ui/Button";
 import { Icon } from "../abstract/Icon";
 
-export const Select = ({
+export const Select: React.FC<SelectProps> = ({
   label,
   options,
   value,
@@ -17,7 +17,7 @@ export const Select = ({
   helperText,
   className,
   disabled,
-}: SelectProps) => {
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const selectId = useId();

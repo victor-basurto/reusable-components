@@ -1,5 +1,5 @@
 "use client";
-import { FC, JSX } from "react";
+import React, { FC, JSX } from "react";
 import { IconName, IconSelectorProps } from "@/types/ui";
 import {
   Sun,
@@ -59,7 +59,10 @@ const icons: Record<IconName, FC<{ className?: string }>> = {
  *
  * @example usage: <Icon name="settings" className="m-4 inline" />
  */
-export const Icon = ({ name, className }: IconSelectorProps): JSX.Element => {
+export const Icon: React.FC<IconSelectorProps> = ({
+  name,
+  className,
+}): JSX.Element => {
   const SelectedIcon = icons[name];
   if (!SelectedIcon) {
     return <span className={className}>({name})?</span>; // default icon or nothing
