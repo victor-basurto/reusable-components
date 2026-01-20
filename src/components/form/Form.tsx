@@ -7,7 +7,7 @@ import { z, ZodType } from "zod";
 
 export function Form<
   TSchema extends ZodType,
-  TFieldValues extends FieldValues = z.infer<TSchema> & FieldValues
+  TFieldValues extends FieldValues = z.infer<TSchema> & FieldValues,
 >({
   schema,
   onSubmit,
@@ -28,7 +28,13 @@ export function Form<
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)} className={className}>
-        {children(methods)}
+        {children({
+          ...methods,
+          register: methods.register,
+          control: methods.control,
+          reset: methods.reset,
+          formState: methods.formState,
+        })}
       </form>
     </FormProvider>
   );

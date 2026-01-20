@@ -93,7 +93,7 @@ export interface DrawerProps {
   placement?: DrawerPlacement;
 }
 /**
- * AlertProps Types
+ * Alert Types
  * */
 export type AlertOption = "info" | "success" | "warning" | "error";
 export interface AlertProps {
@@ -101,4 +101,18 @@ export interface AlertProps {
   title?: string;
   children: React.ReactNode;
   className?: string;
+}
+/**
+ * Alert Dialog Types
+ * */
+export type AlertDialogVariant = "default" | "danger";
+export interface AlertDialogProps {
+  isOpen: boolean;
+  onConfirm: () => void;
+  onClose: () => void;
+  title: string;
+  description: string;
+  confirmLabel?: string;
+  cancelLabel?: string;
+  variant?: AlertDialogVariant;
 }

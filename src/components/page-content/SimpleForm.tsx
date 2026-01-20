@@ -14,6 +14,8 @@ import Slider from "../form/Slider";
 import Toggle from "../form/Toggle";
 import ToggleGroup from "../form/ToggleGroup";
 import { Alert } from "../abstract/Alert";
+import { useState } from "react";
+import { AlertDialog } from "../ui/AlertDialog";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -49,6 +51,7 @@ const loginSchema = z.object({
 type LoginFormvalues = z.infer<typeof loginSchema>;
 export function SimpleForm() {
   const { addToast } = useToast();
+  const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const onSubmit = (data: LoginFormvalues) => {
     console.log(data);
     addToast("loggin in to XM Cloud...", "info");
@@ -56,7 +59,12 @@ export function SimpleForm() {
   return (
     <div className="mx-auto mt-4 p-6 border border-border reounded-xl">
       <Form schema={loginSchema} onSubmit={onSubmit}>
-        {({ control, register, formState: { errors, isSubmitting } }) => (
+        {({
+          control,
+          register,
+          reset,
+          formState: { errors, isSubmitting },
+        }) => (
           <div className="grid grid-cols-6 gap-3">
             {/* Input */}
             <div className="col-span-full lg:col-[1/4]">
@@ -271,7 +279,16 @@ export function SimpleForm() {
             </div>
 
             {/* TODO: alertdialog */}
-            <div className="col-span-full"></div>
+            <div className="col-span-full flex items-center gap-3">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setIsConfirmOpen(true)}
+              >
+                clear form
+              </Button>
+              <p>AlertDialog Component</p>
+            </div>
 
             {/* Button */}
             <div className="col-span-full">
@@ -293,6 +310,18 @@ export function SimpleForm() {
                 protocol
               </Alert>
             </div>
+            <AlertDialog
+              isOpen={isConfirmOpen}
+              title="Reset form Data"
+              description="This will clear all information you've typed into this form"
+              confirmLabel="Yes, Reset"
+              variant="danger"
+              onClose={() => setIsConfirmOpen(false)}
+              onConfirm={() => {
+                reset();
+                addToast("form has been clared", "info");
+              }}
+            />
           </div>
         )}
       </Form>
