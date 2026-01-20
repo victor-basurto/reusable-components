@@ -92,3 +92,13 @@ export interface DrawerProps {
   children: React.ReactNode;
   placement?: DrawerPlacement;
 }
+/**
+ * AlertProps Types
+ * */
+export type AlertOption = "info" | "success" | "warning" | "error";
+export interface AlertProps {
+  variant?: AlertOption;
+  title?: string;
+  children: React.ReactNode;
+  className?: string;
+}

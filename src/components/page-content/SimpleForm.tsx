@@ -13,6 +13,7 @@ import { RadioGroup } from "../form/RadioGroup";
 import Slider from "../form/Slider";
 import Toggle from "../form/Toggle";
 import ToggleGroup from "../form/ToggleGroup";
+import { Alert } from "../abstract/Alert";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -269,6 +270,9 @@ export function SimpleForm() {
               />
             </div>
 
+            {/* TODO: alertdialog */}
+            <div className="col-span-full"></div>
+
             {/* Button */}
             <div className="col-span-full">
               <Button
@@ -280,6 +284,14 @@ export function SimpleForm() {
               >
                 Subscribe
               </Button>
+            </div>
+
+            {/* inline alert */}
+            <div className="col-span-full">
+              <Alert variant="info" title="Subscription Update">
+                By subscribing, you agree to our new 2026 XM Cloud Service
+                protocol
+              </Alert>
             </div>
           </div>
         )}

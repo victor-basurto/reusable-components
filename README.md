@@ -47,8 +47,8 @@ Component Checklist:
 
 #### Dialogs
 
-- [ ] `<Alert>` – Info, success, warning, and error alerts
-- [ ] `<AlertDialog>` – Destructive/confirm action modal
+- [x] `<Alert>` – Info, success, warning, and error alerts
+- [x] `<AlertDialog>` – Destructive/confirm action modal
 - [ ] `<Combobox>` – Autocomplete / searchable dropdown
 - [x] `<Dialog>` (Modal) – Accessible modal with overlay, close button, and focus trap (In-Progress)
 - [x] `<Icon>` – Simple Icon selector using Lucide Icons
