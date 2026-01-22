@@ -16,6 +16,7 @@ import ToggleGroup from "../form/ToggleGroup";
 import { Alert } from "../abstract/Alert";
 import { useState } from "react";
 import { AlertDialog } from "../ui/AlertDialog";
+import { Separator } from "../abstract/Separator";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -277,6 +278,17 @@ export function SimpleForm() {
                 )}
               />
             </div>
+            <div className="col-span-full">
+              {/* simple line */}
+              simple line
+              <Separator />
+            </div>
+            <p>simple separator</p>
+
+            <div className="col-span-full">
+              {/* section header with text */}
+              <Separator label="security & privacy" />
+            </div>
 
             {/* TODO: alertdialog */}
             <div className="col-span-full flex items-center gap-3">
@@ -290,6 +302,10 @@ export function SimpleForm() {
               <p>AlertDialog Component</p>
             </div>
 
+            <div className="col-span-full">
+              {/* closing line before buttons */}
+              <Separator label="End of Form" className="opacity-50" />
+            </div>
             {/* Button */}
             <div className="col-span-full">
               <Button
