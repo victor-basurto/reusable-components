@@ -116,14 +116,3 @@ export interface AlertDialogProps {
   cancelLabel?: string;
   variant?: AlertDialogVariant;
 }
-/**
- * Table Types
- * */
-// Separator
-export type SeparatorVariant = "horizontal" | "vertical";
-export interface SeparatorProps {
-  orientation?: SeparatorVariant;
-  className?: string;
-  label?: string;
-  decorative?: boolean;
-}

@@ -78,7 +78,7 @@ Component Checklist:
 
 - [ ] `<DataTable>` – Advanced table with filtering, sorting, pagination (built on TanStack Table)
 - [x] `<Separator>` – Horizontal or vertical divider
-- [ ] `<Table>` – Responsive data table with sorting, selection, etc.
+- [x] `<Table>` – Responsive data table with sorting, selection, etc.
 
 #### Misc
 
