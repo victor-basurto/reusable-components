@@ -11,7 +11,6 @@ export default function DialogWithToast() {
     dialog.current?.open();
   };
   const handleConfirmAction = () => {
-    console.log("Action Confirmed");
     // trigger the toast for user feedback
     addToast("Changes successfully published!", "warning");
   };

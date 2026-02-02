@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { TableProps } from "@/types/table";
+import { TableProps } from "@/types/ui";
 
 export const TCell: React.FC<TableProps> = ({ children, className }) => {
   return (

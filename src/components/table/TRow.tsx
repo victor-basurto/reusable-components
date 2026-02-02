@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { TRowProps } from "@/types/table";
+import { TRowProps } from "@/types/ui";
 
 export const TRow: React.FC<TRowProps> = ({
   children,

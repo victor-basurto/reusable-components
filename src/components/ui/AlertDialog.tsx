@@ -7,7 +7,6 @@ import { Button } from "./Button";
 
 export const AlertDialog: React.FC<AlertDialogProps> = (props) => {
   const [mounted, setMounted] = useState(false);
-  console.log("calling dialog");
   // only render on client to avoid SSR mismatch with Portals
   useEffect(() => {
     setMounted(true);

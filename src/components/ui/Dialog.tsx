@@ -1,4 +1,5 @@
 "use client";
+import { useToast } from "@/store/toast-context-provider";
 import type { DialogHandle, DialogProps } from "@/types/ui";
 import {
   forwardRef,
@@ -13,6 +14,7 @@ const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   { title, description, modalActions },
   ref,
 ) {
+  const { addToast } = useToast();
   const dialog = useRef<HTMLDialogElement>(null);
   // create a state to store the portal target
   const [mounted, setMounted] = useState(false);
@@ -30,7 +32,10 @@ const Dialog = forwardRef<DialogHandle, DialogProps>(function Dialog(
   const dialogRoot = document.getElementById("modal");
 
   if (!dialogRoot) {
-    console.error("The portal root element with id `dialog` was not found");
+    addToast(
+      "The portal root element with id `dialog` was not found",
+      "warning",
+    );
     return null;
   }
 

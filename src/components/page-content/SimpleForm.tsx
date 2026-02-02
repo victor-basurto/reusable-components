@@ -17,6 +17,7 @@ import { Alert } from "../abstract/Alert";
 import { useState } from "react";
 import { AlertDialog } from "../ui/AlertDialog";
 import { Separator } from "../abstract/Separator";
+import { SimpleUserTable } from "./SimpleUserTable";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -54,8 +55,11 @@ export function SimpleForm() {
   const { addToast } = useToast();
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const onSubmit = (data: LoginFormvalues) => {
-    console.log(data);
-    addToast("loggin in to XM Cloud...", "info");
+    addToast(`loggin in to XM Cloud...`, "info");
+    if (!data.email) return;
+    setTimeout(() => {
+      addToast(`Welcome back: ${data.email}`, "info");
+    }, 3000);
   };
   return (
     <div className="mx-auto mt-4 p-6 border border-border reounded-xl">
@@ -341,6 +345,9 @@ export function SimpleForm() {
           </div>
         )}
       </Form>
+      <Separator />
+      {/* table component */}
+      <SimpleUserTable />
     </div>
   );
 }

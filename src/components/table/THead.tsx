@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { THeadProps } from "@/types/table";
+import { THeadProps } from "@/types/ui";
 
 export const THead: React.FC<THeadProps> = ({
   children,

@@ -13,7 +13,6 @@ export const ToggleGroup: React.FC<ToggleGroupProps> = ({
   const handleToggle = (optionValue: string) => {
     if (disabled) return;
     let newValue: string[];
-    console.log(optionValue);
     if (value.includes(optionValue)) {
       newValue = value.filter((v) => v !== optionValue);
     } else {

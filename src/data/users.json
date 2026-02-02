@@ -1,0 +1,37 @@
+[
+  { "id": "1", "name": "John Doe", "role": "developer", "status": "active" },
+  { "id": "2", "name": "Alice Smith", "role": "designer", "status": "away" },
+  { "id": "3", "name": "Bob Johnson", "role": "manager", "status": "offline" },
+  { "id": "4", "name": "Emily Davis", "role": "tester", "status": "active" },
+  { "id": "5", "name": "Michael Brown", "role": "devOps", "status": "active" },
+  {
+    "id": "6",
+    "name": "Sarah Wilson",
+    "role": "Product Owner",
+    "status": "Away"
+  },
+  {
+    "id": "7",
+    "name": "David Clark",
+    "role": "Scrum Master",
+    "status": "Offline"
+  },
+  {
+    "id": "8",
+    "name": "Sophia Martinez",
+    "role": "UI/UX Designer",
+    "status": "Active"
+  },
+  {
+    "id": "9",
+    "name": "James Taylor",
+    "role": "Backend Developer",
+    "status": "Away"
+  },
+  {
+    "id": "10",
+    "name": "Olivia Anderson",
+    "role": "Frontend Developer",
+    "status": "Active"
+  }
+]

@@ -13,8 +13,11 @@ type LoginFormvalues = z.infer<typeof loginSchema>;
 export function LoginForm() {
   const { addToast } = useToast();
   const onSubmit = (data: LoginFormvalues) => {
-    console.log(data);
-    addToast("loggin in to XM Cloud...", "info");
+    addToast(`loggin in to XM Cloud...`, "info");
+    if (!data.email) return;
+    setTimeout(() => {
+      addToast(`Welcome back: ${data.email}`, "info");
+    }, 3000);
   };
   return (
     <div className="max-w-md mx-auto mt-20 p-6 border border-border reounded-xl">

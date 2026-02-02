@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { SeparatorProps } from "@/types/table";
+import { SeparatorProps } from "@/types/ui";
 import React from "react";
 
 export const Separator: React.FC<SeparatorProps> = ({

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { TableProps } from "@/types/table";
+import { TableProps } from "@/types/ui";
 import React from "react";
 
 export const THeader: React.FC<TableProps> = ({ children, className }) => {
