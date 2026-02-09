@@ -18,6 +18,7 @@ import { useState } from "react";
 import { AlertDialog } from "../ui/AlertDialog";
 import { Separator } from "../abstract/Separator";
 import { SimpleUserTable } from "./SimpleUserTable";
+import { DataTableExample } from "./DataTableExample";
 /**
  * for this example we are creating a form validating the following fields:
  * email
@@ -348,6 +349,9 @@ export function SimpleForm() {
       <Separator />
       {/* table component */}
       <SimpleUserTable />
+      <Separator />
+      {/* table component */}
+      <DataTableExample />
     </div>
   );
 }

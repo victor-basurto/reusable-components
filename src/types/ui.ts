@@ -134,6 +134,38 @@ export interface THeadProps extends TableProps {
   onClick?: () => void;
   sortDir?: SortDirection;
 }
+
+/**
+ * DataTable Types
+ * */
+export interface DataTableColumn<T = object> {
+  key: keyof T | string;
+  label: React.ReactNode;
+  sortable?: boolean;
+  className?: string;
+  headerClassName?: string;
+  render?: (row: T) => React.ReactNode;
+}
+
+export interface DataTableSortConfig {
+  key: string;
+  dir: SortDirection;
+}
+
+export interface DataTableProps<T = object> {
+  columns: DataTableColumn<T>[];
+  data: T[];
+  rowKey: keyof T | ((row: T) => string);
+  sortConfig?: DataTableSortConfig;
+  onSort?: (key: string, dir: SortDirection) => void;
+  selectable?: boolean;
+  selectedIds?: Set<string>;
+  onSelectionChange?: (ids: Set<string>) => void;
+  className?: string;
+  tableClassName?: string;
+  emptyMessage?: React.ReactNode;
+}
+
 /**
  * Separator Types
  * */
